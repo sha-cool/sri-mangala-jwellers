@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-bind="pageTitle">Luxury Jewellery — Loading...</title>
+  <meta name="description" data-bind-attr="content:metaDescription"
+    content="Discover exquisite handcrafted luxury jewellery.">
+  <meta name="keywords"
+    content="luxury jewellery, diamond rings, gold necklaces, bridal jewellery, custom jewellery, premium jewellery">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-diamond">
+        <svg viewBox="0 0 80 80" width="80" height="80">
+          <polygon points="40,5 75,30 60,75 20,75 5,30" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" />
+          <polygon points="40,15 62,30 52,65 28,65 18,30" fill="none" stroke="url(#goldGrad2)" stroke-width="0.8"
+            opacity="0.5" />
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d4a853" />
+              <stop offset="50%" style="stop-color:#f0d48a" />
+              <stop offset="100%" style="stop-color:#b8860b" />
+            </linearGradient>
+            <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#b76e79" />
+              <stop offset="100%" style="stop-color:#d4a853" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="preloader-text" data-bind="shop_name">Loading...</p>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CURSOR ==================== -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon" data-bind="logo_symbol">◇</span>
+        <span class="logo-text" data-bind="shop_name">Jewellers</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#craftsmanship">Craftsmanship</a></li>
+        <li><a href="#customize">Customize</a></li>
+        <li><a href="#contact">Visit</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta">Book Appointment</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero-section">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge">✦ Established <span data-bind="established_year">1987</span> ✦</div>
+      <h1 class="hero-title">
+        <span class="hero-line" data-parallax="0.05" data-bind="hero_headline_1">Timeless</span>
+        <span class="hero-line hero-line-italic" data-parallax="0.08" data-bind="hero_headline_2">Craftsmanship</span>
+      </h1>
+      <p class="hero-subtitle" data-parallax="0.03" data-bind="hero_subtitle">Jewellery that tells your story</p>
+      <div class="hero-ctas">
+        <a href="#collections" class="btn btn-primary">
+          <span>Explore Collections</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Book Appointment</span>
+        </a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to Discover</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3D SHOWCASE ==================== -->
+  <section id="showcase" class="showcase-section">
+    <div class="section-header">
+      <span class="section-tag">Interactive Experience</span>
+      <h2 class="section-title">Exquisite <em>Artistry</em></h2>
+      <p class="section-subtitle">Drag to rotate • Scroll to zoom • Experience the brilliance</p>
+    </div>
+    <div class="showcase-grid">
+      <div class="showcase-card" id="showcaseCard1">
+        <canvas id="showcase3D_1" class="showcase-canvas"></canvas>
+        <div class="showcase-info">
+          <h3>Diamond Solitaire</h3>
+          <p>Brilliant cut • 18K white gold</p>
+        </div>
+      </div>
+      <div class="showcase-card" id="showcaseCard2">
+        <canvas id="showcase3D_2" class="showcase-canvas"></canvas>
+        <div class="showcase-info">
+          <h3>Royal Pendant</h3>
+          <p>Ruby center • Pavé diamonds</p>
+        </div>
+      </div>
+      <div class="showcase-card" id="showcaseCard3">
+        <canvas id="showcase3D_3" class="showcase-canvas"></canvas>
+        <div class="showcase-info">
+          <h3>Eternity Band</h3>
+          <p>Channel set • Platinum finish</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COLLECTIONS ==================== -->
+  <section id="collections" class="collections-section">
+    <div class="section-header">
+      <span class="section-tag">Our Collections</span>
+      <h2 class="section-title">Curated <em>Elegance</em></h2>
+      <p class="section-subtitle">Explore our handpicked selections for every occasion</p>
+    </div>
+    <div class="collections-grid" id="collectionsGrid">
+      <!-- Rendered dynamically from JSON -->
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCT GALLERY ==================== -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-header">
+      <span class="section-tag">Featured Pieces</span>
+      <h2 class="section-title">The <em>Gallery</em></h2>
+      <p class="section-subtitle">Swipe to explore our signature creations</p>
+    </div>
+    <div class="swiper gallery-swiper">
+      <div class="swiper-wrapper" id="productSlides">
+        <!-- Rendered dynamically from JSON -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- ==================== CRAFTSMANSHIP ==================== -->
+  <section id="craftsmanship" class="craftsmanship-section">
+    <div class="craftsmanship-bg">
+      <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1920&h=1080&fit=crop&q=80"
+        alt="Craftsmanship background" loading="lazy">
+      <div class="craftsmanship-bg-overlay"></div>
+    </div>
+    <div class="section-header">
+      <span class="section-tag">Our Process</span>
+      <h2 class="section-title">The Art of <em>Creation</em></h2>
+      <p class="section-subtitle">Every piece is a journey from imagination to perfection</p>
+    </div>
+    <div class="timeline" id="timelineContainer">
+      <div class="timeline-line">
+        <div class="timeline-line-fill" id="timelineFill"></div>
+      </div>
+      <!-- Rendered dynamically from JSON -->
+    </div>
+  </section>
+
+  <!-- ==================== CUSTOM JEWELLERY ==================== -->
+  <section id="customize" class="customize-section">
+    <div class="section-header">
+      <span class="section-tag">Bespoke Service</span>
+      <h2 class="section-title">Design Your <em>Dream</em></h2>
+      <p class="section-subtitle">Create a one-of-a-kind masterpiece with our interactive customizer</p>
+    </div>
+    <div class="customizer-container">
+      <div class="customizer-steps">
+        <div class="customizer-step active" data-step="1">
+          <div class="step-header">
+            <span class="step-number">01</span>
+            <h3>Choose Your Metal</h3>
+          </div>
+          <div class="step-options metal-options">
+            <button class="option-btn active" data-metal="yellow-gold" data-color="#d4a853">
+              <span class="option-swatch" style="background: linear-gradient(135deg, #d4a853, #f0d48a)"></span>
+              <span class="option-label">Yellow Gold</span>
+            </button>
+            <button class="option-btn" data-metal="white-gold" data-color="#e8e8e8">
+              <span class="option-swatch" style="background: linear-gradient(135deg, #c0c0c0, #f5f5f5)"></span>
+              <span class="option-label">White Gold</span>
+            </button>
+            <button class="option-btn" data-metal="rose-gold" data-color="#b76e79">
+              <span class="option-swatch" style="background: linear-gradient(135deg, #b76e79, #e8a0a0)"></span>
+              <span class="option-label">Rose Gold</span>
+            </button>
+            <button class="option-btn" data-metal="platinum" data-color="#d0d0d0">
+              <span class="option-swatch" style="background: linear-gradient(135deg, #a0a0b0, #e0e0e8)"></span>
+              <span class="option-label">Platinum</span>
+            </button>
+          </div>
+        </div>
+        <div class="customizer-step" data-step="2">
+          <div class="step-header">
+            <span class="step-number">02</span>
+            <h3>Select Gemstone</h3>
+          </div>
+          <div class="step-options gem-options">
+            <button class="option-btn active" data-gem="diamond" data-color="#ffffff">
+              <span class="option-gem">💎</span>
+              <span class="option-label">Diamond</span>
+            </button>
+            <button class="option-btn" data-gem="ruby" data-color="#e0115f">
+              <span class="option-gem">🔴</span>
+              <span class="option-label">Ruby</span>
+            </button>
+            <button class="option-btn" data-gem="emerald" data-color="#50c878">
+              <span class="option-gem">🟢</span>
+              <span class="option-label">Emerald</span>
+            </button>
+            <button class="option-btn" data-gem="sapphire" data-color="#0f52ba">
+              <span class="option-gem">🔵</span>
+              <span class="option-label">Sapphire</span>
+            </button>
+          </div>
+        </div>
+        <div class="customizer-step" data-step="3">
+          <div class="step-header">
+            <span class="step-number">03</span>
+            <h3>Your Creation</h3>
+          </div>
+          <div class="customizer-summary">
+            <div class="summary-item">
+              <span class="summary-label">Metal</span>
+              <span class="summary-value" id="summaryMetal">Yellow Gold</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Gemstone</span>
+              <span class="summary-value" id="summaryGem">Diamond</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Estimated Price</span>
+              <span class="summary-value summary-price" id="summaryPrice">₹2,50,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customizer-preview">
+        <canvas id="customizerCanvas" class="customizer-canvas"></canvas>
+        <div class="customizer-ring-glow" id="ringGlow"></div>
+      </div>
+      <div class="customizer-action">
+        <a href="#contact" class="btn btn-primary btn-large">
+          <span>Book Consultation</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-header">
+      <span class="section-tag">Voices of Trust</span>
+      <h2 class="section-title">What Our <em>Clients</em> Say</h2>
+    </div>
+    <div class="testimonials-grid" id="testimonialsGrid">
+      <!-- Rendered dynamically from JSON -->
+    </div>
+  </section>
+
+  <!-- ==================== STORE VISIT / CONTACT ==================== -->
+  <section id="contact" class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-header section-header-left">
+          <span class="section-tag">Visit Us</span>
+          <h2 class="section-title">Experience the <em>Magic</em></h2>
+          <p class="section-subtitle">Step into our showroom and let our experts guide you</p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <h4>Our Showroom</h4>
+              <p><span data-bind="address">Loading...</span><br><span data-bind="city">Loading...</span></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Call Us</h4>
+              <p data-bind="phone">Loading...</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p><span data-bind="hours_weekday">Loading...</span><br><span data-bind="hours_weekend">Loading...</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe id="mapFrame" src="" loading="lazy" allowfullscreen title="Store Location"></iframe>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="glass-panel">
+          <h3>Book an Appointment</h3>
+          <p>Our jewellery consultants are ready to assist you</p>
+          <form id="appointmentForm" class="appointment-form">
+            <div class="form-group">
+              <input type="text" id="formName" placeholder="Your Full Name" required>
+              <label for="formName">Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="formPhone" placeholder="Phone Number" required>
+              <label for="formPhone">Phone Number</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="formEmail" placeholder="Email Address">
+              <label for="formEmail">Email Address</label>
+            </div>
+            <div class="form-group">
+              <select id="formService" required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="bridal">Bridal Consultation</option>
+                <option value="custom">Custom Design</option>
+                <option value="general">General Visit</option>
+                <option value="repair">Repair & Maintenance</option>
+              </select>
+              <label for="formService">Service</label>
+            </div>
+            <div class="form-group">
+              <input type="date" id="formDate" required>
+              <label for="formDate">Preferred Date</label>
+            </div>
+            <div class="form-group">
+              <textarea id="formMessage" placeholder="Any specific requirements..." rows="3"></textarea>
+              <label for="formMessage">Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Confirm Appointment</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-gold-line"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">
+          <span class="logo-icon" data-bind="logo_symbol">◇</span>
+          <span class="logo-text" data-bind="shop_name">Jewellers</span>
+        </a>
+        <p class="footer-tagline" data-bind="footer_tagline">Loading...</p>
+        <div class="footer-socials">
+          <a href="#" id="socialInstagram" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.5" />
+            </svg></a>
+          <a href="#" id="socialFacebook" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg></a>
+          <a href="#" id="socialYoutube" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
+              <polygon points="9.75,15.02 15.5,12 9.75,8.98" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <h4>Collections</h4>
+        <ul id="footerCollections">
+          <!-- Rendered dynamically -->
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Craftsmanship</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Care Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-gold-line"></div>
+    <div class="footer-bottom">
+      <p data-bind="copyright">© 2026 Jewellery. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

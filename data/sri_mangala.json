@@ -1,0 +1,156 @@
+{
+    "shop_name": "Sri Mangala Jewellery",
+    "logo_symbol": "✦",
+    "tagline": "Trusted Gold Jewellery Store",
+    "established_year": "2008",
+    "hero_headline_1": "Timeless Gold",
+    "hero_headline_2": "Craftsmanship",
+    "hero_subtitle": "Elegant jewellery for every celebration",
+    "address": "Sri Mangala Jewellery, Dindigul Road, MDR650, Shanagar",
+    "city": "Pallapatti, Tamil Nadu 639207",
+    "phone": "+91 93637 36482",
+    "email": "hello@mangalajewellers.in",
+    "hours_weekday": "Mon - Sat: 10:00 AM - 8:30 PM",
+    "hours_weekend": "Sunday: 11:00 AM - 6:00 PM",
+    "map_embed_url": "https://maps.google.com/maps?q=Sri+Mangala+Jewellery,+Dindigul+Road,+Pallapatti,+Tamil+Nadu+639207&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "social": {
+        "instagram": "https://instagram.com/mangalajewellers",
+        "facebook": "https://facebook.com/mangalajewellers",
+        "youtube": "https://youtube.com/@mangalajewellers"
+    },
+    "rating": "4.5",
+    "review_source": "Google Reviews",
+    "total_reviews": 8,
+    "category": "Jewelry Store",
+    "location": {
+        "area": "Pallapatti",
+        "state": "Tamil Nadu",
+        "pincode": "639207"
+    },
+    "google_travel_time": "45 mins",
+    "business_status": "Open now",
+    "collections": [
+        {
+            "name": "Gold Jewellery",
+            "description": "Stunning bridal ensembles",
+            "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=750&fit=crop&q=80"
+        },
+        {
+            "name": "Bridal Jewellery",
+            "description": "Uncut diamonds, unmatched beauty",
+            "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=750&fit=crop&q=80"
+        },
+        {
+            "name": "Daily Wear Jewellery",
+            "description": "Subtle elegance for professionals",
+            "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=750&fit=crop&q=80"
+        },
+        {
+            "name": "Traditional Jewellery",
+            "description": "Bold designs for the modern man",
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=750&fit=crop&q=80"
+        },
+        {
+            "name": "Silver Luxe",
+            "description": "Premium silver craftsmanship",
+            "image": "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&h=750&fit=crop&q=80"
+        }
+    ],
+    "products": [
+        {
+            "name": "Polki Choker Set",
+            "metal": "22K Gold",
+            "weight": "52.0g",
+            "price": "₹5,40,000",
+            "badge": "Trending",
+            "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=600&fit=crop&q=80"
+        },
+        {
+            "name": "Rose Gold Bracelet",
+            "metal": "18K Rose Gold",
+            "weight": "15.0g",
+            "price": "₹1,20,000",
+            "badge": "New",
+            "image": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=500&h=600&fit=crop&q=80"
+        },
+        {
+            "name": "Diamond Studs",
+            "metal": "18K White Gold",
+            "weight": "4.5g",
+            "price": "₹88,000",
+            "badge": "Bestseller",
+            "image": "https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?w=500&h=600&fit=crop&q=80"
+        },
+        {
+            "name": "Men's Gold Chain",
+            "metal": "22K Gold",
+            "weight": "28.0g",
+            "price": "₹2,60,000",
+            "badge": "",
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&h=600&fit=crop&q=80"
+        },
+        {
+            "name": "Silver Anklet Pair",
+            "metal": "925 Silver",
+            "weight": "45.0g",
+            "price": "₹8,500",
+            "badge": "",
+            "image": "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=500&h=600&fit=crop&q=80"
+        },
+        {
+            "name": "Navratna Pendant",
+            "metal": "22K Gold",
+            "weight": "8.0g",
+            "price": "₹1,45,000",
+            "badge": "Exclusive",
+            "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=500&h=600&fit=crop&q=80"
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Deepa Krishnan",
+            "text": "Mangala Jewellers made my engagement ring exactly as I dreamt it. Modern, sleek, and absolutely gorgeous. Their team is incredible!",
+            "collection": "Polki Diamonds",
+            "rating": 5,
+            "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80"
+        },
+        {
+            "name": "Arjun Nair",
+            "text": "Finally found a jeweller with great men's designs! The chain I bought is classy, well-made, and gets compliments everywhere.",
+            "collection": "Men's Collection",
+            "rating": 5,
+            "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80"
+        },
+        {
+            "name": "Swathi Balaji",
+            "text": "Their office wear collection is perfect — elegant but not flashy. I wear their pieces to work every day and love the lightweight comfort.",
+            "collection": "Office Wear",
+            "rating": 5,
+            "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80"
+        }
+    ],
+    "craftsmanship": [
+        {
+            "title": "Concept",
+            "description": "Our designers draw inspiration from global trends and Indian heritage to create unique pieces."
+        },
+        {
+            "title": "Material Sourcing",
+            "description": "Every gemstone and metal is ethically sourced and certified for quality and authenticity."
+        },
+        {
+            "title": "3D Modelling",
+            "description": "We use cutting-edge CAD technology to perfect designs before crafting begins."
+        },
+        {
+            "title": "Handcrafting",
+            "description": "Skilled artisans bring each design to life, combining technology with traditional hand-finishing."
+        },
+        {
+            "title": "Final Touch",
+            "description": "Rhodium plating, stone setting, and quality verification complete every masterpiece."
+        }
+    ],
+    "footer_tagline": "Sri Mangala Jewellery, Dindigul Road, MDR650, Shanagar, Pallapatti, Tamil Nadu 639207",
+    "copyright": "© 2026 Mangala Jewellers. All Rights Reserved."
+}
